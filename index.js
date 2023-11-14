@@ -2,6 +2,9 @@ const express = require('express')
 const path = require('path')
 const app = new express()
 const expressEdge = require('express-edge')
+const connectToMongoose = require("./database")
+
+connectToMongoose();
 
 app.use(express.static('public'))
 app.use(expressEdge)
